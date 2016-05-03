@@ -1,4 +1,4 @@
-System.register(['@angular/core'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/router-deprecated', './crisis-center/crisis-center.component', './heroes/hero-list.component', './heroes/hero-detail.component', './dialog.service', './heroes/hero.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,30 @@ System.register(['@angular/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, router_deprecated_1, crisis_center_component_1, hero_list_component_1, hero_detail_component_1, dialog_service_1, hero_service_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (router_deprecated_1_1) {
+                router_deprecated_1 = router_deprecated_1_1;
+            },
+            function (crisis_center_component_1_1) {
+                crisis_center_component_1 = crisis_center_component_1_1;
+            },
+            function (hero_list_component_1_1) {
+                hero_list_component_1 = hero_list_component_1_1;
+            },
+            function (hero_detail_component_1_1) {
+                hero_detail_component_1 = hero_detail_component_1_1;
+            },
+            function (dialog_service_1_1) {
+                dialog_service_1 = dialog_service_1_1;
+            },
+            function (hero_service_1_1) {
+                hero_service_1 = hero_service_1_1;
             }],
         execute: function() {
             let AppComponent = class AppComponent {
@@ -23,12 +41,36 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             AppComponent = __decorate([
                 core_1.Component({
                     selector: 'my-app',
-                    template: '<h1>My First Angular 2 App</h1>'
-                }), 
+                    template: `
+    <h1 class="title">Component Router</h1>
+    <nav>
+      <a [routerLink]="['CrisisCenter']">Crisis Center</a>
+      <a [routerLink]="['Heroes']">Heroes</a>
+    </nav>
+    <router-outlet></router-outlet>
+  `,
+                    providers: [dialog_service_1.DialogService, hero_service_1.HeroService],
+                    directives: [router_deprecated_1.ROUTER_DIRECTIVES]
+                }),
+                router_deprecated_1.RouteConfig([
+                    {
+                        path: '/crisis-center/...',
+                        name: 'CrisisCenter',
+                        component: crisis_center_component_1.CrisisCenterComponent,
+                        useAsDefault: true
+                    },
+                    { path: '/heroes', name: 'Heroes', component: hero_list_component_1.HeroListComponent },
+                    { path: '/hero/:id', name: 'HeroDetail', component: hero_detail_component_1.HeroDetailComponent },
+                ]), 
                 __metadata('design:paramtypes', [])
             ], AppComponent);
             exports_1("AppComponent", AppComponent);
         }
     }
 });
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/ 
 //# sourceMappingURL=app.component.js.map
