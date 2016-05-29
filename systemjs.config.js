@@ -1,3 +1,7 @@
+/**
+ * System configuration for Angular2 samples
+ * Ad just as necessary for your application needs.
+ */
 (function (global) {
 
     // map tells the System loader where to look for things
@@ -15,21 +19,21 @@
         'angular2-in-memory-web-api': {defaultExtension: 'js'},
     };
 
-    var packageNames = [
-        '@angular/common',
-        '@angular/compiler',
-        '@angular/core',
-        '@angular/http',
-        '@angular/platform-browser',
-        '@angular/platform-browser-dynamic',
-        '@angular/router-deprecated',
-        '@angular/testing',
-        '@angular/upgrade',
+    var ngPackageNames = [
+        'common',
+        'compiler',
+        'core',
+        'http',
+        'platform-browser',
+        'platform-browser-dynamic',
+        'router',
+        'router-deprecated',
+        'upgrade',
     ];
 
     // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }
-    packageNames.forEach(function (pkgName) {
-        packages[pkgName] = {main: 'index.js', defaultExtension: 'js'};
+    ngPackageNames.forEach(function (pkgName) {
+        packages['@angular/' + pkgName] = {main: pkgName + '.umd.js',defaultExtension: 'js'};
     });
 
     var config = {
@@ -38,9 +42,9 @@
     }
 
     // filterSystemConfig - index.html's chance to modify config before we register it.
-    if (global.filterSystemConfig) {
+    /*if (global.filterSystemConfig) {
         global.filterSystemConfig(config);
-    }
+    }*/
 
     System.config(config);
 
