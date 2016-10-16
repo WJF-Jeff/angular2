@@ -6,8 +6,8 @@ import {Component} from "@angular/core";
 
 @Component({
     selector: 'app-content',
-    template: `<p>内容</p>`,
-    styleUrls: ['../../css/app.component.css'],
+    template: `
+<router-outlet></router-outlet>`
 })
 export class AppContent {
 }

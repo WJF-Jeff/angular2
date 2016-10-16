@@ -18,7 +18,7 @@ var AppFooter = (function () {
     AppFooter = __decorate([
         core_1.Component({
             selector: 'app-footer',
-            templateUrl: 'tpl/blocks/footer.html',
+            templateUrl: 'app-demo/base-template/app.footer.html',
         }), 
         __metadata('design:paramtypes', [])
     ], AppFooter);

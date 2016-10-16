@@ -6,7 +6,7 @@ import {Component} from "@angular/core";
 
 @Component({
     selector: 'app-header',
-    templateUrl: 'tpl/blocks/header.html',
+    templateUrl: 'app-demo/base-template/app.header.html',
 })
 export class AppHeader {
 }

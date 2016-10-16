@@ -1,13 +1,8 @@
-/**
- * Created by wjf on 4/14/16.
- */
-
 import {Component} from "@angular/core";
 
 @Component({
     selector: 'app-aside',
-    templateUrl: 'tpl/blocks/nav.html',
-    styleUrls: ['../../css/app.component.css']
+    templateUrl: 'app-demo/base-template/app.nav.html'
 })
 
 export class AppAside {

@@ -1,6 +1,3 @@
-/**
- * Created by wjf on 4/14/16.
- */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -18,8 +15,7 @@ var AppAside = (function () {
     AppAside = __decorate([
         core_1.Component({
             selector: 'app-aside',
-            templateUrl: 'tpl/blocks/nav.html',
-            styleUrls: ['../../css/app.component.css']
+            templateUrl: 'app-demo/base-template/app.nav.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AppAside);

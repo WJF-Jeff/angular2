@@ -8,16 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var dashboard_component_1 = require('./hero/dashboard.component');
-var heroes_component_1 = require('./hero/heroes.component');
-var hero_detail_component_1 = require('./hero/hero-detail.component');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var app_content1_1 = require("./modal/app.content1");
+var app_content_1 = require("./base-template/app.content");
+var app_content2_1 = require("./modal/app.content2");
 var routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
-    { path: 'detail/:id', component: hero_detail_component_1.HeroDetailComponent },
-    { path: 'heroes', component: heroes_component_1.HeroesComponent }
+    { path: '', redirectTo: '/app', pathMatch: 'full' },
+    {
+        path: 'app', component: app_content_1.AppContent,
+        children: [
+            { path: "content1", component: app_content1_1.AppContent1 },
+            { path: 'content2', component: app_content2_1.AppContent2 }
+        ]
+    },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

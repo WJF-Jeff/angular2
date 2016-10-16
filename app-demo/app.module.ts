@@ -1,14 +1,14 @@
-import { NgModule }       from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
-import { FormsModule }    from '@angular/forms';
-
-import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './hero/dashboard.component';
-import { HeroDetailComponent }  from './hero/hero-detail.component';
-import { HeroesComponent }      from './hero/heroes.component';
-import { HeroService }          from './hero/hero.service';
-
-import { AppRoutingModule }     from './app-routing.module';
+import {NgModule} from "@angular/core";
+import {BrowserModule} from "@angular/platform-browser";
+import {FormsModule} from "@angular/forms";
+import {AppRoutingModule} from "./app-routing.module";
+import {AppAside} from "./base-template/app.aside";
+import {AppContent} from "./base-template/app.content";
+import {AppHeader} from "./base-template/app.header";
+import {AppFooter} from "./base-template/app.footer";
+import {AppComponent} from "./app.component";
+import {AppContent2} from "./modal/app.content2";
+import {AppContent1} from "./modal/app.content1";
 
 @NgModule({
     imports: [
@@ -18,14 +18,18 @@ import { AppRoutingModule }     from './app-routing.module';
     ],
     declarations: [
         AppComponent,
-        DashboardComponent,
-        HeroDetailComponent,
-        HeroesComponent
+        AppAside,
+        AppContent,
+        AppHeader,
+        AppFooter,
+        AppContent1,
+        AppContent2
     ],
-    providers: [ HeroService ],
-    bootstrap: [ AppComponent ]
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
 
 
 /*

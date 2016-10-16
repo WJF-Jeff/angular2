@@ -18,7 +18,7 @@ var AppHeader = (function () {
     AppHeader = __decorate([
         core_1.Component({
             selector: 'app-header',
-            templateUrl: 'tpl/blocks/header.html',
+            templateUrl: 'app-demo/base-template/app.header.html',
         }), 
         __metadata('design:paramtypes', [])
     ], AppHeader);

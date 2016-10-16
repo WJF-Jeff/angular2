@@ -6,7 +6,7 @@ import {Component} from "@angular/core";
 
 @Component({
     selector: 'app-footer',
-    templateUrl: 'tpl/blocks/footer.html',
+    templateUrl: 'app-demo/base-template/app.footer.html',
 })
 export class AppFooter {
 }
